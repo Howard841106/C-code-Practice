@@ -13,7 +13,7 @@ bool push(int value){
 int pop(){
     if(stack.top == EMPTY)
     {
-        return STACK_EMPTY;
+        return INT_MIN;
     } 
 
     int reuslt = stack.memory[stack.top];
@@ -26,9 +26,11 @@ int main(){
     push(56);
     push(78);
     push(13);
+    push(8);
+    push(7);
 
     int t;
-    while((t=pop())!=STACK_EMPTY)
+    while((t=pop())!=INT_MIN)
     {
         printf("t = %d\n", t);
     }
